@@ -6,12 +6,11 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 BIN_PATH="$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
-mons -e left
+# mons -e left
 
-export BROWSER="qutebrowser"
+export BROWSER="firefox"
 export TERMINAL="kitty"
-export FILES="pcmanfm"
-export CODEEDITOR="code"
+export FILES="ranger"
+export CODEEDITOR="atom"
 
 xset r rate 200 50
-

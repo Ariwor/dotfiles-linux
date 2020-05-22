@@ -3,8 +3,8 @@ feh
 polybar
 kitty
 firefox
+ranger
 playerctl
-httpie
 maim
 zathura
 zathura-pdf-mupdf
