@@ -259,7 +259,8 @@ exec_always --no-startup-id fix_xcursor
 # # Open applications on specific workspaces (to find out what classes the apps are do: `xprop | grep CLASS`
 assign [class="$TERMINAL"] $ws1
 assign [class="firefox"] $ws2
-assign [class="$CODEEDITOR"] $ws3
+assign [class="Atom"] $ws3
+assign [class="libreoffice"] $ws4
 assign [class="discord"] $ws5
 
 # Open specific applications in floating mode
@@ -347,6 +348,9 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+# Lockscreen
+# bindsym $mod+shift+x exec betterlockscreen -l dim
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
