@@ -42,7 +42,7 @@ adobe-source-code-pro-fonts
 
 # Screens
 
-_Based on/inspired by `github/stavrosfil`_
+_Based on/inspired by `github/Stavrosfil`_
 
 ![screen1](.github/1.png)
 ![screen2](.github/2.png)
@@ -96,10 +96,15 @@ sudo pacman -S pulseaudio
   5. Restart i3
 
 
-  **Workspace icons in the status bar**
+**Workspace icons in the status bar**
 
-  * First you need to install the [awesome](https://github.com/gabrielelana/awesome-terminal-fonts) symbols, by running:
+* First you need to install the [awesome](https://github.com/gabrielelana/awesome-terminal-fonts) symbols, by running:
   `
   sudo pacman -S awesome-terminal-fonts
   `
-  * Browse for icons [here](https://fontawesome.com/) and copy the _Unicode  Glyph_ from the ones you like in the i3 config file.
+* Browse for icons [here](https://fontawesome.com/) and copy the _Unicode  Glyph_ from the ones you like in the i3 config file.
+
+**Lock- & Login- screen**
+* Install and configure `betterlockscreen` by following the instructions [here](https://github.com/pavanjadhaw/betterlockscreen).
+* If you want to keep `set $mode_system` in your i3 config, add a `betterlockscreen` option (e.g. `betterlockscreen -l dim`) instead of `blurlock` in the `/usr/bin/i3exit` file.
+* To change your login screen, use `lightdm-settings` and edit the "Background" option.
