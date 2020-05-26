@@ -59,16 +59,34 @@ A brief guide, together with a list of common problems (& solutions) encountered
 * Consider your free disk space before separating ```root``` and ```/home``` partitions.
 * For swap partition size make sure to check [this](https://itsfoss.com/swap-size/).
 * Make sure to update your packages, by running:
-`
-sudo pacman -Syu
-`
+```bash
+$ sudo pacman -Syu
+```
+
+* In case you run into errors when you update the packages in your system, such as: `error: failed to commit transaction (invalid or corrupted package)`, clear your cache first before updating (to remove any partial installations) with:
+```bash
+$ sudo pacman -Sc
+```
+or
+```bash
+$ paccache -rvk0
+```
 
 **Audio issues**
 
 * First thing you should run out of the box is:
-`
-sudo pacman -S pulseaudio
-`
+```bash
+$ sudo pacman -S pulseaudio
+```
+
+**Enable TRIM (for SSD)**
+
+The `fstrim.timer` which will execute TRIM weekly:
+
+```bash
+$ sudo systemctl enable fstrim.timer
+$ sudo systemctl start fstrim.timer
+```
 
 **Nvidia graphics & screen tearing**
 * Install Nvidia drivers and configure Nvidia settings by following this [guide](https://wiki.manjaro.org/index.php?title=Configure_NVIDIA_(non-free)_settings_and_load_them_on_Startup).
@@ -81,16 +99,16 @@ sudo pacman -S pulseaudio
 * A fix that worked for me is described [here](https://askubuntu.com/questions/476664/cannot-change-backlight-brightness-ubuntu-14-04) and is the following:
 
   1. Open `/etc/default/grub` with your favorite editor:
-  ```
+  ```bash
   sudo atom /etc/default/grub
   ```
   2. Add `video.use_native_backlight=1` here (inside `""`):
-  ```
+  ```bash
   GRUB_CMDLINE_LINUX_DEFAULT=""
   ```
   3. Save & exit
   4. Run:
-  ```
+  ```bash
   sudo update-grub
   ```
   5. Restart i3
@@ -99,9 +117,9 @@ sudo pacman -S pulseaudio
 **Workspace icons in the status bar**
 
 * First you need to install the [awesome](https://github.com/gabrielelana/awesome-terminal-fonts) symbols, by running:
-  `
+  ```bash
   sudo pacman -S awesome-terminal-fonts
-  `
+  ```
 * Browse for icons [here](https://fontawesome.com/) and copy the _Unicode  Glyph_ from the ones you like in the i3 config file.
 
 **Lock- & Login- screen**
