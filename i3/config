@@ -67,7 +67,7 @@ bindsym $mod+i border normal
 
 # --------------------------------- Gaps -------------------------------- #
 # Set inner/outer gaps
-gaps inner 10
+gaps inner 0 # previously 10
 gaps outer 0
 
 bindsym $mod+z			gaps inner current plus 5
@@ -252,7 +252,8 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id xautolock -time 10 -locker blurlock
+# exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker 'betterlockscreen -l dim'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -261,6 +262,8 @@ assign [class="$TERMINAL"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Atom"] $ws3
 assign [class="MATLAB R2019b - academic use"] $ws3
+assign [class="Rstudio"] $ws3
+assign [class="Pcmanfm"] $ws4
 assign [class="libreoffice"] $ws4
 assign [class="discord"] $ws5
 
