@@ -55,7 +55,7 @@ A brief guide, together with a list of common problems (& solutions) encountered
 **Dual-boot Manjaro/Windows 10**
 
 * Download Manjaro i3 edition from [here](https://manjaro.org/download/#i3).
-* There is an excellent dual-boot step-by-step guide [here](https://forum.manjaro.org/t/howto-dual-boot-manjaro-windows-10-step-by-step/52668).
+* There is an excellent dual-boot step-by-step guide [here](https://forum.manjaro.org/t/root-tip-dual-boot-manjaro-and-windows/1164).
 * Consider your free disk space before separating ```root``` and ```/home``` partitions.
 * For swap partition size make sure to check [this](https://itsfoss.com/swap-size/).
 * Make sure to update your packages, by running:
