@@ -210,8 +210,8 @@ bindsym $mod+Ctrl+Left workspace prev
 # ---------------------------- Scratchpad window --------------------------- #
 
 # for_window [instance="kitty" title="Life"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
-bindsym $mod+p floating enable, resize shrink left 150, resize shrink right 150, resize shrink down 150, resize shrink up 150
-bindsym $mod+Shift+p floating enable, resize grow left 150, resize grow right 150, resize grow down 150, resize grow up 150
+# bindsym $mod+p floating enable, resize shrink left 150, resize shrink right 150, resize shrink down 150, resize shrink up 150
+# bindsym $mod+Shift+p floating enable, resize grow left 150, resize grow right 150, resize grow down 150, resize grow up 150
 # bindsym $mod+Shift+Return exec kitty, floating enable, resize shrink left 300, resize shrink right 300, resize shrink down 300, resize shrink up 300
 
 # move the currently focused window to the scratchpad
@@ -447,3 +447,22 @@ bindsym XF86AudioPrev exec		playerctl previous
 
 # Execute compton
 exec_always --no-startup-id		"killall -q picom; picom --config ~/.config/picom/picom.conf"
+
+# Multiple monitor layout
+
+set $ws1    "1:  "
+set $ws2	"2:  "
+set $ws3	"3:  "
+set $ws4	"4:  "
+set $ws5	"5:  "
+set $ws6	"6:  "
+set $ws7	"7:  "
+
+workspace "1:  " output HDMI-0 DP-2
+workspace "2:  " output HDMI-0 DP-2
+workspace "3:  " output HDMI-0
+workspace "4:  " output HDMI-0
+workspace "5:  " output DP-2
+
+# Multiple monitor shortcuts
+bindsym $mod+p move workspace to output right
