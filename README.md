@@ -126,3 +126,9 @@ $ sudo systemctl start fstrim.timer
 * Install and configure `betterlockscreen` by following the instructions [here](https://github.com/pavanjadhaw/betterlockscreen).
 * If you want to keep `set $mode_system` in your i3 config, add a `betterlockscreen` option (e.g. `betterlockscreen -l dim`) instead of `blurlock` in the `/usr/bin/i3exit` file.
 * To change your login screen, use `lightdm-settings` and edit the "Background" option.
+
+**Multiple monitors**
+* Install [autorandr](https://github.com/phillipberndt/autorandr) that allows automatically switching of `xrandr` configurations
+* Configure your monitors _sequentially_ with `xrandr`
+* After each configuration, save your profile with `autorandr --save <profile>`
+* Use `autorandr --change` to load your config based on the connected devices
