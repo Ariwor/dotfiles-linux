@@ -132,3 +132,7 @@ $ sudo systemctl start fstrim.timer
 * Configure your monitors _sequentially_ with `xrandr`
 * After each configuration, save your profile with `autorandr --save <profile>`
 * Use `autorandr --change` to load your config based on the connected devices
+
+**Razer peripherals**
+* Install the AUR [openrazer](https://aur.archlinux.org/packages/openrazer-meta/) package. A wiki guide can be found [here](https://wiki.archlinux.org/index.php/Razer_peripherals#OpenRazer) and in [GitHub](https://github.com/openrazer/openrazer).
+* Install a graphical front-end, such as [polychromatic](https://aur.archlinux.org/packages/polychromatic/). If any dependencies are not found, install them as well (for example [nodejs-less](https://aur.archlinux.org/packages/nodejs-less/)).
