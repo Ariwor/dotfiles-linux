@@ -244,7 +244,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore
+
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -261,9 +263,11 @@ exec_always --no-startup-id fix_xcursor
 assign [class="$TERMINAL"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Atom"] $ws3
+assign [class="code"] $ws3
 assign [class="MATLAB R2019b - academic use"] $ws3
 assign [class="Rstudio"] $ws3
 assign [class="Pcmanfm"] $ws4
+assign [class="dolphin"] $ws4
 assign [class="libreoffice"] $ws4
 assign [class="discord"] $ws5
 
@@ -447,6 +451,7 @@ bindsym XF86AudioPrev exec		playerctl previous
 
 # Execute compton
 exec_always --no-startup-id		"killall -q picom; picom --config ~/.config/picom/picom.conf"
+
 
 # Multiple monitor layout
 

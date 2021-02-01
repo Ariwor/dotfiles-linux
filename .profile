@@ -11,6 +11,10 @@ BIN_PATH="$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export BROWSER="firefox"
 export TERMINAL="kitty"
 export FILES="ranger"
-export CODEEDITOR="atom"
+export CODEEDITOR="code"
 
 xset r rate 200 50
+
+# Add ForceFullCompositionPipeline in nvidia-settings
+
+nvidia-settings --assign CurrentMetaMode="DPY-3: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}, DPY-2: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}"
