@@ -17,4 +17,4 @@ xset r rate 200 50
 
 # Add ForceFullCompositionPipeline in nvidia-settings
 
-nvidia-settings --assign CurrentMetaMode="DPY-3: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}, DPY-2: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}"
+nvidia-settings --assign CurrentMetaMode="DPY-3: nvidia-auto-select +1920+0 {ForceFullCompositionPipeline=On}, DPY-2: nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
