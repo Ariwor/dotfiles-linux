@@ -263,9 +263,10 @@ exec_always --no-startup-id fix_xcursor
 assign [class="$TERMINAL"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Atom"] $ws3
-assign [class="code"] $ws3
+assign [class="Code"] $ws3
 assign [class="MATLAB R2019b - academic use"] $ws3
 assign [class="Rstudio"] $ws3
+assign [class="Thunderbird"] $ws4
 assign [class="Pcmanfm"] $ws4
 assign [class="dolphin"] $ws4
 assign [class="libreoffice"] $ws4
