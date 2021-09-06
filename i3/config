@@ -265,7 +265,7 @@ assign [class="firefox"] $ws2
 assign [class="Atom"] $ws3
 assign [class="Code"] $ws3
 assign [class="MATLAB R2019b - academic use"] $ws3
-assign [class="Rstudio"] $ws3
+assign [class="RStudio"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Pcmanfm"] $ws4
 assign [class="dolphin"] $ws4
@@ -455,8 +455,8 @@ bindsym XF86AudioPrev exec		playerctl previous
 # Execute compton
 exec_always --no-startup-id		"killall -q picom; picom --config ~/.config/picom/picom.conf"
 
-
 # Multiple monitor layout
+exec_always --no-startup-id		autorandr --change 
 
 set $ws1    "1:  "
 set $ws2	"2:  "
